@@ -5,3 +5,5 @@ This is a rough skeleton of a Webcrawling program. Currently it only grabs the l
 into two files: queue.txt and crawled.txt. 
 
 Requirments: Python 3, BeautifuSoup4, and Requests
+
+Acknowledgement: Thanks to buckroberts (thenewboston) 

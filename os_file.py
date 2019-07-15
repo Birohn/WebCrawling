@@ -1,5 +1,9 @@
+#@author: Byron Mouen
+#Main purpose of this file is to hold
+#all methods pertaining to editing/configuring
+#files an directories.
 import os
-
+#generate directory if it does not exist.
 def generate_project_dir(directory):
 	if not os.path.exists(directory):
 		print('Creating project' + directory)
@@ -22,18 +26,18 @@ def write_to_file(directory,data):
 def append_to_file(directory, data):
 	with open(directory,'a',encoding='utf-8') as f:
 		f.write(data + '\n')
-		
+	
 def delete_file_content(directory):
 	with open(directory,'w') as f:
 		pass
-		
+#quicker to access the links from a set than a file		
 def file_to_set(file):
 	links = set()
 	with open(file, 'rt',encoding='utf-8') as f:
 		for lines in f:
 			links.add(lines.replace('\n',''))
 	return links
-
+	
 def set_to_file(set, file):
 	if set is not None:
 		generator=list((links for links in set if links is not None and 'http' in links))

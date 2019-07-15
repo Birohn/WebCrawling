@@ -1,7 +1,13 @@
+#@author: Byron Mouen
+#This file's purpose is to parse webpages for
+#links and such
+
 from bs4 import BeautifulSoup
 from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
+
+
 def simple_get(url):
 	try:
 		with closing(get(url, stream=True)) as resp:

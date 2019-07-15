@@ -1,13 +1,17 @@
+#author:Byron Mouen
+#main file of the program
+
 import threading
 from queue import Queue
 from spider import Spider
 from os_file import *
-
+#folder name where the queue and crawled files will be stored
 PROJECT_NAME ='steam'
+#starting point
 HOMEPAGE ='https://store.steampowered.com/'
-DOMAIN_NAME ='Nothing'
 QUEUE_FILE = PROJECT_NAME + '/queue.txt'
 CRAWLED_FILE = PROJECT_NAME + '/crawled.txt'
+#Number of thread varies on your cpu
 NUMBER_OF_THREADS = 5
 queue =Queue()
 Spider(PROJECT_NAME,HOMEPAGE,DOMAIN_NAME)

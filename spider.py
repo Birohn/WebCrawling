@@ -1,3 +1,8 @@
+#author: Byron Mouen
+#The spider class which is responsible for
+#grabbing the links and updating the queue
+#and crawled files
+
 from parsing import grab_links
 from os_file import *
 from urllib.request import urlopen
